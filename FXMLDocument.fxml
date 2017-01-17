@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="449.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="assignment2.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#62a9eb" height="452.0" stroke="BLACK" strokeType="INSIDE" width="631.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffab1f" height="55.0" layoutX="13.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="605.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffab1f" height="55.0" layoutX="13.0" layoutY="383.0" stroke="BLACK" strokeType="INSIDE" width="605.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe2a4" height="94.0" layoutX="14.0" layoutY="78.0" stroke="BLACK" strokeType="INSIDE" width="186.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe2a4" height="299.0" layoutX="416.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="202.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe2a4" height="299.0" layoutX="209.0" layoutY="77.0" stroke="BLACK" strokeType="INSIDE" width="195.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffe2a4" height="194.0" layoutX="14.0" layoutY="181.0" stroke="BLACK" strokeType="INSIDE" width="186.0" />
+      <Button fx:id="printInvoiceButton" layoutX="435.0" layoutY="395.0" mnemonicParsing="false" onAction="#onPrintInvoice" text="Print Invoice" />
+      <Button fx:id="resetButton" layoutX="548.0" layoutY="395.0" mnemonicParsing="false" onAction="#onReset" text="Reset" />
+      <Label layoutX="29.0" layoutY="396.0" prefHeight="30.0" prefWidth="143.0" text="Service Cost:  $">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="175.0" layoutY="23.0" prefHeight="30.0" prefWidth="264.0" text="Auto Care Center LLC">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="newCustomer" layoutX="29.0" layoutY="99.0" mnemonicParsing="false" onAction="#onUpdateServiceCostRequest" selected="true" text="New Customer">
+         <toggleGroup>
+            <ToggleGroup fx:id="customerType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="regularCustomer" layoutX="29.0" layoutY="131.0" mnemonicParsing="false" onAction="#onUpdateServiceCostRequest" text="Regular Customer" toggleGroup="$customerType" />
+      <Label layoutX="38.0" layoutY="206.0" text="Name:" />
+      <Label layoutX="37.0" layoutY="246.0" text="Phone:" />
+      <Label layoutX="39.0" layoutY="289.0" prefHeight="0.0" prefWidth="43.0" text="Email:" />
+      <Label layoutX="24.0" layoutY="336.0" prefHeight="21.0" prefWidth="57.0" text="Address:" />
+      <TextField fx:id="name" layoutX="92.0" layoutY="201.0" prefHeight="31.0" prefWidth="102.0" />
+      <TextField fx:id="phone" layoutX="92.0" layoutY="241.0" prefHeight="31.0" prefWidth="102.0" />
+      <TextField fx:id="email" layoutX="92.0" layoutY="284.0" prefHeight="31.0" prefWidth="102.0" />
+      <TextField fx:id="address" layoutX="92.0" layoutY="331.0" prefHeight="31.0" prefWidth="102.0" />
+      <CheckBox fx:id="brakes" layoutX="229.0" layoutY="110.0" mnemonicParsing="false" onAction="#onUpdateServiceCostRequest" text="Brakes" />
+      <CheckBox fx:id="tiresRotation" layoutX="229.0" layoutY="162.0" mnemonicParsing="false" onAction="#onUpdateServiceCostRequest" text="Tire Rotation" />
+      <CheckBox fx:id="fluidCheck" layoutX="229.0" layoutY="216.0" mnemonicParsing="false" onAction="#onUpdateServiceCostRequest" text="Fluid Check" />
+      <CheckBox fx:id="wash" layoutX="229.0" layoutY="268.0" mnemonicParsing="false" onAction="#onUpdateServiceCostRequest" text="Car Wash" />
+      <CheckBox fx:id="inspection" layoutX="229.0" layoutY="309.0" mnemonicParsing="false" onAction="#onUpdateServiceCostRequest" prefHeight="55.0" prefWidth="156.0" text="Annual Emission Inspection" wrapText="true" />
+      <CheckBox fx:id="tireReplacement" layoutX="440.0" layoutY="100.0" mnemonicParsing="false" onAction="#onUpdateServiceCostRequest" text="Tire Replacement" />
+      <CheckBox fx:id="oilChange" layoutX="440.0" layoutY="236.0" mnemonicParsing="false" onAction="#onUpdateServiceCostRequest" text="Oil Change" />
+      <Label layoutX="155.0" layoutY="401.0" />
+      <Label fx:id="totalCost" layoutX="182.0" layoutY="397.0" text="0.00">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="replacementOptions" disable="true" layoutX="460.0" layoutY="137.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="oilChangeOptions" disable="true" layoutX="460.0" layoutY="274.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>
